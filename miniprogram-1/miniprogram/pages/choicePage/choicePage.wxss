@@ -1,0 +1,113 @@
+.header{
+  display: flex;
+  background-color: rgba(219, 219, 221, 0.884);
+  align-items: center;
+  height: 60rpx;
+}
+.active{
+  color: rgb(247, 247, 247);
+  font-weight: bold;
+  width: 106px;
+  height: 45px;
+}
+.unview{
+  width: 50rpx;
+  height: 2rpx;
+  background:rgb(111,205,41); 
+}
+.no-active{
+  width: 106px;
+  height: 43px;
+}
+.active-font{
+  color: rgb(111,205,41);
+  border-bottom: 2px solid rgb(111,205,41);
+  
+}
+.header .headerClass{
+  color: red;
+  margin-left: 20rpx;
+}
+.header .headerClass,
+.header .headerPin{
+  font-size: 28rpx;
+}
+.search text{
+  color: gainsboro;
+  font-family: monospace;
+  font-size: 30rpx;
+  line-height: 46rpx;
+    
+}
+.search image{
+  padding-left:50rpx; 
+  width: 46rpx;
+  height: 46rpx;
+}
+.main{
+  display: flex;
+}
+.left{
+  width: 25%;
+  background:rgb(255, 255, 255,255);
+}
+.left view{
+  padding-top: 30rpx;
+  text-align: center;
+}
+.right{
+  width: 75%;  
+  background:rgb(247, 247, 247);
+}
+.img{
+  width: 20px;
+  height: 20px;
+}
+ 
+.itemTitle{
+  font-size: 32rpx;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+  color:gray;
+}
+.listItem .listText{
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rpx;
+}
+.listItem .listText view{
+  display: flex;
+  align-items: flex-end;
+}
+.listItem .listText text{
+  font-size: 34rpx;
+  margin-top: 10rpx;
+}
+.listItem .listText .money{
+  color: red;
+}
+.listItem .listText view text{
+  font-size: 28rpx;
+  color :silver;
+  margin-right: 60rpx;
+}
+.listItem .listText view button{
+  background-color: red;
+  color: white;
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 0px;
+}
+::-webkit-scrollbar
+{
+width: 6px;
+height: 6px;
+background-color: #ffffff;
+} 
+::-webkit-scrollbar-track{
+  height: 20rpx;
+  color: black;
+}
+.left-item-hover {
+  border:red;
+}

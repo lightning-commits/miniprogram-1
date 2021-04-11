@@ -1,0 +1,45 @@
+<!--miniprogram/pages/swichSubject/swichSubject.wxml-->
+<view>
+  <view style="margin:20px 0px 0px 22px;width:90%;height:130px;border-radius:13px;box-shadow:0px 2px 4px 2px #DDDDDD;border-width:0rpx;">
+    <view style="margin-left:155px;padding-top: 11px;">
+      <text style="font-size:28rpx;color: #8a8a8a;">当前考试</text>
+    </view>
+    <view style="width:40rpx;height:40rpx;margin-top:29rpx;margin-left:136rpx;">
+      <image src="{{majorIcon}}" style="width:40rpx;height:40rpx;"></image>
+    </view>
+    <view style="width:100rpx;height:40rpx;margin-left:127rpx;margin-top:18rpx;">
+        <text style="font-size:28rpx;color: #8a8a8a;">{{majorName}}</text>
+    </view>
+    <view style="width:116rpx;margin-left:450rpx;margin-top:-65rpx;" bindtap="swichMajor">
+      <text style="color:#6ca10a;font-size:28rpx;">切换考试</text>
+    </view>
+    <view style="width:64px;margin-left:561rpx;margin-top: -17px">
+      <image src="../../images/left.png" style="width:18px;height: 18px;"></image>
+    </view>
+  </view>
+
+  <!--公共科目-->
+  <view style="margin:50rpx 0rpx 0rpx 270rpx;">
+    <view>
+      <text style="color: #8a8a8a;">—  公共科目 —</text>
+    </view>
+    <view style="margin-top:51rpx;margin-left:-138rpx;background: #dbdbdb;width:500rpx;height:80rpx;border-radius:31rpx;" wx:for="{{publicList}}" wx:for-item="item">
+      <view style="margin-left:170rpx;padding-top:18rpx;" data-id="{{item.id}}" bindtap="swichSubject">
+         <text style="color:#515151">{{item.subjectName}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!--专业科目-->
+  <view style="margin:50rpx 0rpx 0rpx 270rpx;">
+    <view>
+      <text style="color: #8a8a8a;">—  专业科目 —</text>
+    </view>
+    <view style="margin-top:51rpx;margin-left:-138rpx;background: #dbdbdb;width:500rpx;height:80rpx;border-radius:31rpx;" wx:for="{{majorList}}" wx:for-item="item">
+      <view style="margin-left:170rpx;padding-top:18rpx;" data-id="{{item.id}}" bindtap="swichSubject">
+         <text style="color:#515151">{{item.subjectName}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,5 @@
+/* miniprogram/pages/updateInfoPage/updateInfoPage.wxss */
+.btn-area{
+  width:90%;
+  margin:40rpx 0rpx 0rpx 40rpx;
+}

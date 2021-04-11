@@ -1,0 +1,63 @@
+<!--头部数量展示-->
+<view>
+  <view class="line"></view>
+  <view style="margin: 50px 0px 0px 165px;">
+    <text style="color:gray">收藏总数</text>
+  </view>
+  <view style="margin:10px 0px 0px 0px;text-align: center;">
+    <text style="font-size: 30px;">{{collectionCount}}</text>
+  </view>
+  <view class="line_down"></view>
+  <!--收藏题目块-->
+  <view  wx:if="{{collectionList.length > 0}}">
+    <!--父节点-->
+      <view wx:for="{{collectionList}}" wx:for-item="item" style="margin: 20px 0px 0px 30px;" >
+        <view data-id="{{item.practiceId}}" bindtap="fatherTreeItem">
+          <view style="float: left;">
+            <image src="{{node == item.practiceId ?'../../images/openFile.png':'../../images/closeFile.png'}}" style="width:25px;height: 25px;"></image>
+          </view>
+          <view style="margin-left: 35px;">
+            <view style="float: left;">
+                <text style="color: #515151;">{{item.chapterName}}</text>
+            </view>
+            <view style="margin-left: 85%;" bindtap="fatherQuery" data-id="{{item.practiceId}}">
+              <image src="../../images/write.png" style="height:20px;width: 20px;" ></image>
+            </view>
+          </view>
+        </view>
+        <view style="margin-left: 35px;">
+          <text style="color: #8a8a8a;">{{item.count}}道</text>
+        </view>
+        <!--子节点-->
+        <view wx:for="{{item.chapterPracticeVos}}" wx:for-item="chap" style="margin-top: 25px;display:{{node == item.practiceId?'block':'none'}}">
+            <view>
+              <view style="float: left;">
+                <image src="../../images/yuan.png" style="width:20px;height: 20px;"></image>
+              </view>
+              <view style="margin-left: 35px;">
+                <view style="float: left;">
+                  <text style="color: #515151;">{{chap.examinationSite}}</text>
+                </view>
+                <view style="margin-left: 85%;" bindtap="childQuery" data-name="{{chap.examinationSite}}">
+                  <image src="../../images/write.png" style="height:20px;width: 20px;" ></image>
+                </view>
+              </view>
+            </view>
+            <view style="margin-left:35px;margin-top: -20px;">
+              <text style="color: #8a8a8a;">
+                {{chap.count}}道
+              </text>
+            </view>
+        </view>
+        <view class="line_down_item"></view>
+      </view>
+  </view>
+  <view wx:else>
+    <view style="margin-left:280rpx">
+        <image src="../../images/nodata.png" style="width:100px;height:100px"></image>
+      </view>
+      <view style="margin-left:251rpx">
+        <text style="color: #999999;">还没有收藏题目!!</text>
+      </view>
+  </view>
+</view>

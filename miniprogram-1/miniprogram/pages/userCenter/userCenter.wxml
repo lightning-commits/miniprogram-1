@@ -1,0 +1,77 @@
+<!--miniprogram/pages/userCenter/userCenter.wxml-->
+<view class="container">
+  <view class="nav_logo">
+  </view>
+    <view class="page">
+        <view class="userImg">
+          <open-data type="userAvatarUrl" class="userinfo" id="userinfo"></open-data>
+        </view>
+        <view style="margin-left:70rpx;">
+          <text style="font-size:40rpx;color:white;font-weight: bold;">{{nickName}}</text>
+        </view>
+    </view>
+    <view style="width:100%;">
+      <view style="margin-top:-16px;margin-left: 20px;width:100px;float:left;">
+          <button type="default" hover-class="btn-hover" open-type="getUserInfo" bindgetuserinfo="userInfo">
+            <image class="img_class_one" src="../../images/team.png" style="width:60rpx;height:60rpx;"></image>
+          </button>
+        </view>
+        <view style="margin-left:60px;margin-top:-15px;float:left;width:50rpx;" bindtap="shareMoney">
+          <image class="img_class_one" src="../../images/shareMoney.png" style="width:60rpx;height:60rpx;"></image>
+        </view>
+        <view style="margin-left: 65px;margin-top:-15px;" bindtap="collection">
+          <image class="img_class_one" src="../../images/collection.png" style="width:60rpx;height:60rpx;margin-left:200rpx"></image>
+        </view>
+    </view>
+    <view style="width:100%;">
+      <view style="margin-left:40rpx;margin-top: -4px;float:left;margin-left: 37px;">
+        <text style="color: #707070;">我的团队</text>
+      </view>
+      <view style="float:left;margin-left: 16%;">
+        <text style="color: #707070;">好友分享</text>
+      </view>
+      <view style="width:128rpx;float:left;margin-left: 16%;">
+        <text style="color: #707070;">我的收藏</text>
+      </view>
+     </view>
+    <view style="width:100%;height:7px;background: #e6e6e6;margin-top:30px;"></view>
+    <view style="margin-top:20px;" bindtap="siwchSubject">
+      <view style="float:left;width: 36px;">
+        <image src="../../images/switch-examination.png" style="width:40rpx;height:40rpx"></image>
+      </view>        
+      <view style="width:97px;margin-left:5px;float:left">
+        <text style="color:#4E4E4E">选择考试</text>
+      </view>
+      <view style="float:left;margin-left: 218rpx;">
+        <text style="font-size:19px;color: #737373;">{{majorName}}</text>
+      </view>
+      <view style="float:left;margin-left: 26rpx;">
+        <image src="../../images/right.png" style="width:60rpx;height:60rpx"></image>
+      </view>
+    </view>
+    <view style="width:100%;height:7px;background: #e6e6e6;margin-top:15px;"></view>
+    <view style="margin-top:20px;" bindtap="updateInfo">
+      <view style="float:left;width: 36px;">
+        <image src="../../images/update.png" style="width:40rpx;height:40rpx"></image>
+      </view>        
+      <view style="width:97px;margin-left:5px;float:left">
+        <text style="color:#4E4E4E">修改资料</text>
+      </view>
+      <view style="float:left;margin-left: 314rpx;">
+        <image src="../../images/right.png" style="width:60rpx;height:60rpx"></image>
+      </view>
+    </view>
+    <view style="width:100%;height:2rpx;background: #e6e6e6;margin-top:15px;"></view>
+    <view style="margin-top:20px;" bindtap="about">
+      <view style="float:left;width: 36px;">
+        <image src="../../images/about.png" style="width:40rpx;height:40rpx"></image>
+      </view>        
+      <view style="width:97px;margin-left:5px;float:left" >
+        <text style="color:#4E4E4E">关于我们</text>
+      </view>
+      <view style="float:left;margin-left: 314rpx;">
+        <image src="../../images/right.png" style="width:60rpx;height:60rpx"></image>
+      </view>
+    </view>
+    <view style="width:100%;height:2rpx;background: #e6e6e6;margin-top:15px;"></view>
+</view>

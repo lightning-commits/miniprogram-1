@@ -1,0 +1,27 @@
+<view class="page">
+  <view>
+    <view><image src="../../images/homework.png" style="margin: 160px 0px 0px 120px;width:130px;height:130px;"></image></view>
+  </view>
+  <!--查询错误-->
+  <view class='page-footer'>
+    <view style="width:100px;margin: 10px 0px 0px 100px;">
+      <text style="color: #515151;">共 {{questionCount}} 道题</text>
+    </view>
+    <view class="wrong-view" >
+      <view style="float: left;">
+        <text>，错误答题 </text>
+      </view>
+      <view >
+        <text >{{wrongList.length}}</text> 题
+      </view>
+    </view>
+    <view class="wrong-btns">
+      <view class="btn-one" wx:if="{{wrongList.length > 0}}">
+        <button type="primary" plain="true" bindtap="toView" hover-class="other-button-hover" class="wrong-btn" style="height: 46px;"> 点击查看 </button>
+      </view>
+      <view class="btn-two">
+        <button type="primary" bindtap="toIndex" hover-class="other-button-hover" class="wrong-btn" style="height: 46px;{{wrongList.length == 0?'width:200px;margin-left:-121px':''}}"> 返回首页 </button>
+      </view>
+    </view>
+  </view>
+</view>

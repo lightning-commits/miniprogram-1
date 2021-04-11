@@ -1,0 +1,108 @@
+<view>
+  <view class="nav_logo">
+    <view class="team_bg">
+      <!--我的团队-->
+      <view style="margin: 20px 0px 0px 15px;padding-top:15px">
+        <text style="color:#6ca10a">我的团队（人）</text>    
+      </view>
+      <view style="margin: 8px 0px 0px 15px;">
+        <text style="font-size:30px">{{parentUser.teamCount == null ? 0:parentUser.teamCount}}</text>
+      </view>
+      <view>
+        <image src="../../images/team_photo.png" style="width:80px;height:85px;margin: -140rpx 0px 0px 485rpx;"></image>
+      </view>
+    </view>
+    <!--邀请人数，已报名，未报名-->
+    <view  class="invitation_class" >
+      <view style="float:left;width:70px;margin-left:20px">
+        <view style="margin-top: 5px;">
+          <text>邀请人数</text>
+        </view>
+         <view style="margin-top: 5px;">
+          <text style="font-size:20px">{{parentUser.teamCount == null ? 0:parentUser.teamCount}}</text>
+        </view>
+      </view>
+      <view style="margin-left: 135rpx;float:left;width:219rpx">
+        <view style="margin-top: 5px;">
+          <text >已报名</text>
+        </view>
+        <view style="margin-top: 5px;">
+          <text style="font-size:20px">{{parentUser.signedUp == null ? 0: parentUser.signedUp}}</text>
+        </view>
+      </view>
+      <view style="padding-top: 5px;">
+        <view >
+          <text>未报名</text>
+        </view>
+        <view style="margin-top: 5px;">
+          <text style="font-size:20px">{{parentUser.notRegistered == null ? 0 : parentUser.notRegistered}}</text> 
+        </view>
+       </view>
+    </view>
+  </view>
+  <!--我的邀请人-->
+  <view class="myself_invitation" style="display:{{parentUser.ctlUser==null?'none':'block'}}">
+        <view style="margin-left:50rpx;padding-top: 4rpx;width:78rpx">
+          <text style="font-family:cursive;font-weight: bold;">我的</text>
+        </view>
+        <view style="margin-left: 29rpx;width:115rpx">
+          <text style="font-family:cursive;font-weight: bold;">邀请人</text>
+        </view>
+        <view style="margin: -85rpx 0px 0px 179rpx">
+          <image src="{{parentUser.ctlUser.avatarUrl == null?'../../images/head_p.png':parentUser.ctlUser.avatarUrl}}" class="avatar"></image>
+        </view>
+        <view style="margin: -85rpx 0px 0px 269rpx">
+          <text style="font-weight:bold;font-size: 13px;">{{parentUser.ctlUser.nickName == null? '暂无':parentUser.ctlUser.nickName}}</text>
+        </view>
+        <view style="margin:-5rpx 0px 0px 265rpx">
+          <text style="font-size:11px">微信号：{{parentUser.ctlUser.wechatName == null? '暂无':parentUser.ctlUser.wechatName}}</text>
+        </view>
+        <view class="contact_class" data-name="{{parentUser.ctlUser.wechatNumber}}" style="margin: -72rpx  0px 0px 466rpx;border: 3rpx solid #62b900;border-radius:14px;width:176rpx;height:66rpx" bindtap="contactClick">
+            <image src="../../images/weChat.png" style="height:17px;width:17px;margin-top: 4px;margin-left:5px"></image>
+            <text style="margin-left:6px;font-size:14px;margin-left:5px">联系TA</text>
+        </view>
+  </view>
+  <!--分类-->
+  <view class="scroll_view">
+    <scroll-view scroll-y style="height:45px;margin-left: 77rpx;" scroll-x class='sv' bindtap='getchildren' >
+      <view data-id='0' class="tab_list {{curHdIndex=='0' || tabdefault=='0'? 'on' : ''}}" style="width:100rpx;float: left;">邀请人数</view>
+      <view data-id='1' class="tab_list {{curHdIndex=='1'? 'on' : ''}}" style="width:100rpx;float:left;margin-left: 67rpx;">已报名</view>
+      <view data-id='2' class="tab_list {{curHdIndex=='2'? 'on' : ''}}" style="width:100rpx;float:left;margin-left: 33px;">未报名</view>
+    </scroll-view>
+  </view>
+
+  
+  <!--加载下方团队成员-->
+  <view style="margin-top:-100px" wx:if="{{teamDataList.length > 0}}">
+      <block  wx:for="{{teamDataList}}" wx:for-item="item" >
+        <view class="team_invitation">
+              <view style="margin: -50px  0px 0px 23px;">
+                <image src="{{item.avatarUrl == null?'../../images/head_p.png':item.avatarUrl}}" class="team_avatar"></image>
+              </view>
+              <view style="margin:-46px 0px 0px 0px;font-weight:bold">
+                <text style="margin: -47px 0px 0px 66px;">{{item.nickName}}</text>
+              </view>
+              <view style="margin: -2px 0px 0px 66px;">
+                <text style="font-size:11px">手机号：{{item.phone}}</text>
+              </view>
+              <view style="margin: -2px 0px 0px 66px;">
+                <text style="font-size:11px">微信号：{{item.wechatName}}</text>
+              </view>
+              <view class="contact_class" data-name="{{item.wechatNumber}}" style="margin: -88rpx  0px 0px 480rpx;border:1px solid #62b900;border-radius:14px;width:82px;height:28px;" bindtap="contactClick">
+                  <image src="../../images/weChat.png" style="height:17px;width:17px;margin-top: 4px;margin-left:5px"></image>
+                  <text style="margin-left:6px;font-size:14px;margin-left:5px">联系TA</text>
+              </view>
+          </view>
+         </block>
+    </view>
+    <view wx:else>
+      <view style="margin-left:280rpx">
+        <image src="../../images/nodata.png" style="width:100px;height:100px"></image>
+      </view>
+      <view style="margin-left:200rpx">
+        <text style="color: #999999;">团队还没人，赶紧去分享把!!</text>
+      </view>
+    </view>
+</view>
+
+

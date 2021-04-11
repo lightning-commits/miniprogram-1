@@ -1,0 +1,91 @@
+<view >
+  <view class="nav_logo">
+    <view class="text_class" bindtap="siwchSubject">
+      <view class="font_text">{{majorInfo.subjectName}} 
+      </view>
+      <view class="view_img_class">
+        <image class="img_class" src="../../images/down.png"></image>
+      </view>
+    </view>
+    <!--轮播图-->
+    <view>
+      <swiper class="swiper_class" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="true">
+        <block wx:for="{{imgList}}" wx:key="imgUrls">
+          <swiper-item class="swiper_item_class">
+            <image src="{{item.url}}" mode="widthFix"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--中间图标-->
+    <view class="center_view_set" >
+      <view>
+        <view bindtap="toTopic" style="float:left;margin: 71rpx 0px 0px 43rpx;">
+          <view style="margin-left: 16px;">
+              <image class="img_class_one" src="../../images/examination.png"></image>
+          </view>
+          <view style="margin-left: -6px;"><text style="font-size:13px;color:gray">考点智能练习</text></view>
+        </view>
+        <view bindtap="chapterClick" style="float:left;margin: 71rpx 0px 0px 70rpx;">
+          <view style="margin-left: 12px;">
+          <image class="img_class_one" src="../../images/chapter.png"></image>
+          </view>
+          <view style="margin-left: -6px;"><text style="font-size:13px;color:gray">章节真题练习</text></view>
+        </view>
+        <view  bindtap="trueQuestion" style="float:left;margin: 71rpx 0px 0px 62rpx;">
+          <view style="margin-left: 9px;">
+            <image class="img_class_one" src="../../images/ture.png"></image>
+          </view>
+          <view><text style="font-size:13px;color:gray">真题模考</text></view>
+        </view>
+      </view>
+        <view  bindtap="team" style="float:left;margin: 71rpx  0px 0px 33rpx;">
+          <view style="margin-left: 9px;">
+            <button type="default" hover-class="btn-hover" open-type="getUserInfo" style="width:100px;height: 39px;margin-left:-55rpx;" bindgetuserinfo="userInfo">
+              <image class="img_class_one" src="../../images/team.png"></image>
+            </button>
+          </view>
+          <view style="margin-left: 9px;"><text style="font-size:13px;color:gray">我的团队</text></view>
+        </view>
+        <view  bindtap="shareMoney" style="float:left;margin: 71rpx  0px 0px 57rpx;">
+          <view style="margin-left: 9px;">
+          <image class="img_class_one" src="../../images/shareMoney.png" ></image>
+          </view>
+          <view><text style="font-size:13px;color:gray">好友分享</text></view>
+        </view>
+        <view  bindtap="collection" style="float:left;margin: 71rpx  0px 0px 103rpx;">
+          <view style="margin-left: 9px;">
+          <image class="img_class_one" src="../../images/collection.png"></image>
+          </view>
+          <view><text style="font-size:13px;color:gray">我的收藏</text></view>
+        </view>
+    </view>
+    <!--下方轮播图-->
+    <view>
+      <swiper class="swiper_class_down" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="true">
+        <block wx:for="{{downImgList}}" wx:key="imgUrls">
+          <swiper-item class="swiper_item_class">
+            <image src="{{item.url}}" mode="widthFix"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <!--下方章节视频-->
+    
+    <view>
+      <view  wx:for="{{downVideoList}}" wx:for-item="item">
+          <view>
+            <view style="width:12px;height:12px;margin-left: 30px;margin-top:25px;"><image src="../../images/lc.png" style="width:12px;height:12px"></image></view>
+            <view style="margin-left: 55px;margin-top:-11px;"><text>{{item.videoName}}</text></view>
+            <view style="margin-left: 320px;margin-top:-20px;">
+              <image src="../../images/play.png" style="width:20px;height: 20px;"   data-id='{{item.id}}'></image><!--bindtap="onclickVideo"-->
+            </view>
+          </view>
+          <view style="margin-top: 10px;">
+            <text style="font-size:12px;color:gray;margin-left:50px">{{item.videoStudyNum}}人学习</text>
+          </view>
+          <view class="line"></view>
+      </view>
+    </view>
+  </view>
+</view>

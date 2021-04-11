@@ -1,0 +1,4 @@
+<view class="canvas-box" style="overflow:hidden;height:0px">
+      <canvas  style="width: {{canvasWidth}}px;height: {{canvasHeight}}px;position:fixed;top:9999px;" canvas-id="mycanvas" class="canvas-poster" disable-scroll="true"/>
+  </view>  
+  <image src="{{imagePath}}" class='poster-img' style="margin-left:40px;height:470px"></image>

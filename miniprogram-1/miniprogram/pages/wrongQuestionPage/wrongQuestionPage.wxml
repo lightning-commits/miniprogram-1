@@ -1,0 +1,53 @@
+<view class="page" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend">
+  <view class="line"></view>
+  <!--题目快-->
+    <view class="page_switch">
+      <view style="width:30%">
+        <text class="page_switch_text">{{questionList[wrongList[index]].ctlIntelligencePractice.isManyQuestion==1?"多项选择":"单项选题"}}</text>
+      </view>
+      <view style="margin-left:85%;margin-top: -28px;">
+        <text style="font-size: 25px;color:#53ab10">{{index+1}}</text>
+        <text style="font-size: 20px;">/{{questionSize}}</text>
+      </view>
+    </view>
+    <view class="line_down"></view>
+    <view>
+      <view class="question_class">
+        <text style="color:#2c2c2c">{{questionList[wrongList[index]].ctlIntelligencePractice.questionName}}</text>
+        <text style="color:#8a8a8a">{{questionList[wrongList[index]].ctlIntelligencePractice.bgData}}</text>
+      </view>
+    </view>
+    <!--答题块-->
+    <view>
+      <radio-group class="radio-group" bindchange="radioChange" wx:if="{{questionList[wrongList[index]].ctlIntelligencePractice.isManyQuestion==0}}">
+          <label class="radio my-choosebox" wx:for="{{questionList[wrongList[index]].ctlChoices}}">
+            <text>\n</text>
+            <radio disabled="disabled" value="{{item.answerTitle}}"  checked="{{item.checked}}"></radio>{{item.answerTitle}}、{{item.questionAnswer}}
+            <text>\n</text>
+          </label>
+      </radio-group>
+      <checkbox-group class="checkbox-group" wx:else>
+        <label class="checkbox my-choosebox" wx:for="{{questionList[wrongList[index]].ctlChoices}}">
+          <text>\n</text>
+          <checkbox disabled="disabled" value="{{item.answerTitle}}" checked="{{item.checked}}"></checkbox>{{item.answerTitle}}、{{item.questionAnswer}}
+          <text>\n</text>
+        </label>
+      </checkbox-group>
+    </view>
+    <!--客户答案，实际答案-->
+    <view class="answer_class">
+      <view>
+        <text style="color:red">您的答案为 {{chooseValue[wrongList[index]]}}</text>
+      </view>
+      <view style="margin: -23px 0px 0px 170px;">
+        <text style="color:#5aa61a">正确答案为 {{questionList[wrongList[index]]['trueAnswer']}}</text>
+      </view>
+    </view>
+    <!--题目解析-->
+    <view>
+      <view style="margin: 20px 0px 0px 30px;"><text style="color:#8a8a8a">解析</text></view>
+      <view style="margin: 15px 0px 0px 60px;">
+        <text>{{questionList[wrongList[index]].ctlIntelligencePractice.analysis}}</text>
+      </view>
+    </view>
+</view>

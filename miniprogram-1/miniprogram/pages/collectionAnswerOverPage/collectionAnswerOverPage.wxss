@@ -1,0 +1,5 @@
+/* miniprogram/pages/collectionAnswerOverPage/collectionAnswerOverPage.wxss */
+.btn-two{
+  width: 30%;
+  margin:150px 0px 0px 150px
+}

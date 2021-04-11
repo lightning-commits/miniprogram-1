@@ -1,0 +1,8 @@
+/* miniprogram/pages/videoPage/videoPage.wxss */
+.line{
+  width:90%;
+  height:2rpx;
+  background:#aaa;
+  margin-left:38px;
+  margin-top: 15px;
+}

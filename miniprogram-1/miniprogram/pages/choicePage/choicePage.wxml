@@ -1,0 +1,35 @@
+ <view class='main'>
+  
+ <view class='left'>
+  <scroll-view scroll-y="true" style="height: {{height}}px" scroll-into-view="true" scroll-with-animation="true">
+    <block wx:for="{{leftText}}" wx:for-list="item" hover-class="left-item-hover">
+      <view class="{{classfiySelect == item.id?'active':'no-active'}}" data-id='{{item.id}}' bindtap='left_list'>
+        <text class="{{classfiySelect == item.id?'active-font':''}}">{{item.categoryName}}</text>
+      </view>
+    </block>
+   </scroll-view>
+ </view>
+ <view class='right'>
+  <scroll-view scroll-y="true" style="height: {{height}}px" bindscroll="scroll" scroll-top="{{scrollTop}}" scroll-into-view="{{'inToview'+rigId}}" scroll-with-animation="true">
+    <block wx:for="{{rightData}}" wx:for-list="item">
+      <view style="float:left;margin-top:20rpx">
+      <view class="itemTitle" id="{{'category'+item.id}}" wx:if="{{item.majorList.length > 0}}">
+        <text>{{item.categoryName}}</text>
+      </view>
+        <block wx:for="{{item.majorList}}" wx:for-item="majorItem">
+          <view style="margin:20px 0px 0px 22px;width:40%;height:170rpx;border-radius:13px;box-shadow:0px 2px 4px 2px #DDDDDD;border-width:0rpx;float:left;background:white">
+            <view bindtap="right_list" data-id='{{majorItem.id}}'>
+              <view style="margin-top:20px;text-align:center">
+                <image src="{{majorItem.urlIoc}}" class="img"></image>
+              </view>
+              <view style="text-align:center">
+                <text style="font-size:12px;color: #515151;">{{majorItem.majorName}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </scroll-view>
+ </view>
+ </view>

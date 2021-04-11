@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/swichSubject/swichSubject",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/userCenter/userCenter",
+    "pages/choicePage/choicePage",
+    "pages/videoPage/videoPage",
+    "pages/answer/answer",
+    "pages/resultPage/resultPage",
+    "pages/wrongQuestionPage/wrongQuestionPage",
+    "pages/collectionPage/collectionPage",
+    "pages/collectionAnswerPage/collectionAnswerPage",
+    "pages/collectionAnswerOverPage/collectionAnswerOverPage",
+    "pages/teamPage/teamPage",
+    "pages/signUpPage/signUpPage",
+    "pages/sharePage/sharePage",
+    "pages/updateInfoPage/updateInfoPage",
+    "pages/aboutPage/aboutPage",
+    "pages/chapterPage/chapterPage",
+    "pages/trueQuestionPage/trueQuestionPage"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1196db",
+    "list": [
+      {
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "报名",
+        "iconPath": "images/signUp.png",
+        "selectedIconPath": "images/in_signUp.png",
+        "pagePath": "pages/signUpPage/signUpPage"
+      },
+      {
+        "text": "个人中心",
+        "iconPath": "images/personcenter.png",
+        "selectedIconPath": "images/in_personcenter.png",
+        "pagePath": "pages/userCenter/userCenter"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap84.json"
+}

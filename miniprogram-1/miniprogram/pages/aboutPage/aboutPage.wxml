@@ -1,0 +1,19 @@
+
+
+<view>
+  <view style="margin: 100px 0px 0px 138px;">
+    <image src="../../images/logo.png" style="width:100px;height: 100px;"></image>
+  </view>
+  <view style="margin: 10px 0px 0px 155px;">
+    <text style="font-size:20px;font-weight:bold;color: #6F6F6F;">证题库</text>
+  </view>
+  <view style="margin: 10px 0px 0px 122px;">
+    <text style="color: #666666;">科学通关，懒人必备</text>
+  </view>
+  <view style="margin: 10px 0px 0px 103px;">
+    <text style="color: #999999;">N类合一，考证通关大杀器</text>
+  </view>
+  <view style="margin: 240px 0px 0px 130px;">
+    <text style="color:#D5D5D5;font-size: 13px;">东莞证题库有限公司</text>
+  </view>
+</view>

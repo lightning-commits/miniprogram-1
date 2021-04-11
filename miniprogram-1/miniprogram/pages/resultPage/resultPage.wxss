@@ -1,0 +1,18 @@
+/* miniprogram/pages/resultPage/resultPage.wxss */
+.wrong-view{
+  width: 300px;
+  margin-left: 180px;
+  margin-top: -21px;
+  color: #515151;
+}
+.btn-one{
+  width:130px;
+  margin-left:30px
+}
+.wrong-btns{
+  margin-top: 200px;
+}
+.btn-two{
+  margin:-45px 0px 0px 200px;
+    width: 130px;
+}

@@ -1,0 +1,16 @@
+<view>
+  <block wx:for="{{bgDataList}}" wx:for-item="item">
+    <view style="margin-top: 10px;" >
+        <view style="margin-left:10px;"  data-name="{{item.bgData}}" bindtap="bgDataClick">
+          <image src="../../images/playTrue.png" style="width:28px;height: 28px;"></image>
+        </view>
+        <view style="margin: -28px 0px 0px 45px;">
+          <text>{{item.bgData}}</text>
+        </view>
+        <view style="width:30px;margin: -20px 0px 0px 320px;"  data-name="{{item.bgData}}" bindtap="bgDataClick">
+          <image src="../../images/write.png" style="height:20px;width: 20px;" ></image>
+        </view>
+      </view>
+      <view style="width:100%;margin-top:20px;height: 1px;background:#aaa;"></view>
+    </block>
+</view>

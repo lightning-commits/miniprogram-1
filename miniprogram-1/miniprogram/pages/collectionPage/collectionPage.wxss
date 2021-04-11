@@ -1,0 +1,19 @@
+/* miniprogram/pages/collectionPage/collectionPage.wxss */
+.line{
+  width:100%;
+  height:1rpx;
+  background:#cdcdcd;
+  margin-top: 15px;
+}
+.line_down{
+  width:100%;
+  height:2rpx;
+  background:#cdcdcd;
+  margin-top: 50px;
+}
+.line_down_item{
+  width:100%;
+  height:2rpx;
+  background:#cdcdcd;
+  margin-top: 25px;
+}

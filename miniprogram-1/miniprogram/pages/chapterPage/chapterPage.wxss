@@ -1,0 +1,6 @@
+.line_down_item{
+  width:100%;
+  height:2rpx;
+  background:#cdcdcd;
+  margin-top: 25px;
+}

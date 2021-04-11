@@ -1,0 +1,160 @@
+/* miniprogram/pages/userCenter/userCenter.wxss */
+
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.nav_logo{
+  display: relative;
+flex-direction: column;
+align-items: center;
+height: 300rpx;
+}
+.nav_logo::after{
+  content: '';
+  width: 100%;
+  height: 230rpx;
+  position: absolute;
+  z-index: -1;
+  left: 0%;
+  top: 0;
+  border-radius: 0 0 42% 42%;
+  background: linear-gradient(160deg,rgb(111,206,41), rgb(111,206,41));
+}
+.upHead {
+  background-color: #22a1ea;
+  width: 750rpx;
+  height: 136px;
+}
+.userImg {
+    width: 55rpx;
+    height: 50rpx;
+    margin-top: -285rpx;
+    margin-left: -130rpx;
+}
+#userinfo{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 50%;
+  display: flex;
+  overflow: hidden;
+  text-align: center;
+}
+.login {
+  font-size: 20px;
+  margin-left: 117px;
+  margin-top: -46px;
+  font-weight: bold;
+}
+.title {
+  font-size: 12px;
+  margin-left: 116px;
+  margin-top: 4px;
+  color: grey;
+}
+.title1 {
+  font-size: 14px;
+  margin-left: 67px;
+  margin-top: 34px;
+  font-weight: bold;
+}
+.title1-one {
+  font-size: 11px;
+  margin-left: 68px;
+}
+.title2 {
+  font-size: 14px;
+  margin-left: 157px;
+  margin-top: -35px;
+  font-weight: bold;
+}
+.title2-one {
+  font-size: 11px;
+  margin-left: 157px;
+}
+.title3 {
+  font-size: 14px;
+  margin-left: 246px;
+  margin-top: -36px;
+  font-weight: bold;
+}
+.title3-one {
+  font-size: 11px;
+  margin-left: 250px;
+} 
+.invitation{
+  margin-top: 126rpx;
+  margin-left: 68rpx;
+}   
+.invitation-flsh {
+  margin-left: 421rpx;
+  margin-top: -38rpx;
+}
+.table {
+  border: 1px solid #dadada;
+  border-bottom: 0;
+  width: 98%;
+  margin-top: 7px;
+  }
+.tr {
+  widows: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin-left:30px;
+  }
+.th,.td {
+  padding: 10px;
+  width:100%;
+  }
+  .th{
+    font-weight: 400;
+    background-color: #dadada;
+  }
+  .textPYQ{
+    color: green;
+  }
+  .foot-mini-btn {
+    width: 251rpx;
+    margin-top: 24px;
+    margin-left: 24px;
+    border-color: green;
+    color: green;
+  }
+  .foot-samll-btn {
+    width: 251rpx;
+    margin-top: -48px;
+    margin-left: 400rpx;
+    color: red;
+    border-color: red;
+  }
+  .textS {
+    color: red;
+  }
+  .tableClass {
+    background: #f6f6f6;
+    width: 321px;
+    height: 100px;
+    margin-top: 32px;
+    margin-left: 28px;
+    box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15);
+    border-radius: 10rpx;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .tableImg{
+    width: 113rpx;
+    height: 118rpx;
+    border-radius: 50%;
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    background-color: gray;
+  }
+  .tableView {
+    padding-top: 13px;
+    padding-left: 15px;
+  }

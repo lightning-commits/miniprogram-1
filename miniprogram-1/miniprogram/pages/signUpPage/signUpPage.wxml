@@ -1,0 +1,47 @@
+<view wx:if="{{signUpInfo.length == 0}}">
+  <view>
+    <view style="margin: 15px 0px 0px 30%;">
+        <text style="font-weight:bold;font-size:26px;">全国统考\n</text>
+    </view>
+    <view style="margin: 10px 0px 0px 15%;">
+      <text style="font-size:20px;color:red;font-weight: bold;">报考专业：{{majorInfo.majorName}}</text>
+    </view>
+    <view style="margin-top:10px">
+      <text style="margin:10px 0px 0px 15%;color:red;font-size:20px;font-weight: bold;">报考学费：{{majorInfo.money}}元</text>
+    </view>
+    <view style="margin-top:10px">
+      <text style="margin:10px 0px 0px 15%;color:red;font-size:20px;font-weight: bold;">报名截止日期{{majorInfo.examinationTimeStr==null?'暫定':majorInfo.examinationTimeStr}}</text>
+    </view>
+  </view>
+  <view style="margin: 15px 0px 0px -23%;">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+    <!-- <view class="weui-cell weui-cell_input" style="margin: 0px 0px 0px 30%;">
+      <input class="weui-input" type="text" name="name" placeholder="请输入姓名" style="border:2px solid #6ca10a;border-radius:10px;width: 80%;height:30px;"/>
+    </view>
+    <view class="weui-cell weui-cell_input" style="margin: 15px 0px 0px 30%;">
+      <input class="weui-input" type="text" name="phone" placeholder="联系号码" style="border:2px solid #6ca10a;border-radius:10px;width: 80%;height:30px;"/>
+    </view>
+    <view class="weui-cell weui-cell_input" style="margin: 15px 0px 0px 30%;">
+      <input class="weui-input" type="text" name="idCradNum" placeholder="身份证号" style="border:2px solid #6ca10a;border-radius:10px;width: 80%;height:30px;"/>
+    </view>
+    <view class="weui-cell weui-cell_input" style="margin: 15px 0px 0px 30%;">
+      <input class="weui-input" type="text" name="address" placeholder="身份证地址" style="border:2px solid #6ca10a;border-radius:10px;width: 80%;height:30px;"/>
+    </view>
+    <view class="weui-cell weui-cell_input" style="margin: 15px 0px 0px 30%;">
+      <input class="weui-input" type="text" name="nation" placeholder="名族" style="border:2px solid #6ca10a;border-radius:10px;width: 80%;height:30px;"/>
+    </view> -->
+    <view class="weui-cell weui-cell_input" style="margin: 15px 0px 0px 30%;">
+      <input class="weui-input" type="text" name="money" placeholder="报考金额" disabled value="{{majorInfo.money}}"  style="border:2px solid #6ca10a;border-radius:10px;width: 80%;height:30px;background:#bfbfbf;color:red"/>
+    </view>
+    <view class="weui-cell weui-cell_input" style="margin: 15px 0px 0px 30%;">
+      <input class="weui-input" type="text" name="majorName" placeholder="报考专业" disabled value="{{majorInfo.majorName}}" style="border:2px solid #6ca10a;border-radius:10px;width: 80%;height:30px;background:#bfbfbf;color:red"/>
+    </view>
+    <view class="btn-area" style="margin-left: 35%;">
+        <button style="margin:16px 0;width: 70%;" type="primary" formType="submit">确认报名</button>
+      </view>
+  </form>
+  </view>
+</view>
+<view wx:else> 
+  <view style="margin-top: 200px;"><text style="font-size:20px;color: red;">您已成功报名，准考证将会在考试前一个月公布，请届时到小程序中查看......</text></view>
+</view>

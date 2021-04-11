@@ -1,0 +1,14 @@
+<!--miniprogram/pages/collectionAnswerOverPage/collectionAnswerOverPage.wxml-->
+<view class="page">
+  <view>
+      <view><image src="../../images/homework.png" style="margin: 160px 0px 0px 145px;width:130px;height:135px;"></image></view>
+  </view>
+  <view style="margin: 20px 0px 0px 170px;">
+    <text style="color:#515151">练习已结束</text>
+  </view>
+  <view>
+    <view class="btn-two">
+        <button type="primary" bindtap="toIndex" hover-class="other-button-hover" class="wrong-btn" style="height: 46px;"> 返回首页 </button>
+      </view>
+  </view>
+</view>

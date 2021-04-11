@@ -1,0 +1,37 @@
+<!--miniprogram/pages/videoPage/videoPage.wxml
+<view>
+    <view class="">
+      <video 
+      src="{{videoUrl}}"
+      show-center-play-btn="{{true}}"
+      show-play-btn="{{true}}"
+      controls
+      picture-in-picture-mode="{{['push','pop']}}"
+      bindenterpictureinpicture='bindenterpictureinpicture'
+      bindleavepictureinpicture='bindleavepictureinpicture'
+      style="width:100%"
+      autoplay="{{true}}">
+      </video>
+    </view> 
+    <view>
+      <view style="font-size:20px;color:#86df0a;margin:10px 0px 0px 20px">选课</view>
+      <view style="width:17%;height:2px;background:#86df0a;margin:10px 0px 0px 10px"></view>
+    </view>-->
+    <!--下方章节视频
+    <view>
+      <view  wx:for="{{downVideoList}}" wx:for-item="item">
+          <view>
+            <view style="width:12px;height:12px;margin-left: 30px;margin-top:25px;"><image src="../../images/lc.png" style="width:12px;height:12px"></image></view>
+            <view style="width:90%;margin-left: 55px;margin-top:-11px;"><text>{{item.videoName}}</text></view>
+            <view style="margin-left: 320px;margin-top:-20px;">
+              <image src="../../images/play.png" style="width:20px;height: 20px;"  bindtap="onclickVideo" data-id='{{item.id}}'></image>
+            </view>
+          </view>
+          <view style="margin-top: 10px;">
+            <text style="font-size:12px;color:gray;margin-left:50px">{{item.videoStudyNum}}人学习</text>
+          </view>
+          <view class="line"></view>
+      </view>
+    </view>
+</view>
+-->
